@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  # MongoDB Database
+  mongo:
+    image: mongo:7
+    container_name: talentbridge-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - talentbridge-net
+
+  # Node.js API Server
+  server:
+    build:
+      context: ./server
+      dockerfile: ../Dockerfile.server
+    container_name: talentbridge-server
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+      - MONGO_URI=mongodb://mongo:27017/talentbridge
+      - JWT_SECRET=${JWT_SECRET:-talentbridge_jwt_secret_change_me}
+      - JWT_EXPIRE=30d
+      - CLIENT_URL=http://localhost:3000
+    depends_on:
+      - mongo
+    networks:
+      - talentbridge-net
+
+  # React Frontend (Nginx)
+  client:
+    build:
+      context: ./client
+      dockerfile: ../Dockerfile.client
+    container_name: talentbridge-client
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      - server
+    networks:
+      - talentbridge-net
+
+volumes:
+  mongo-data:
+
+networks:
+  talentbridge-net:
+    driver: bridge
