@@ -1,0 +1,84 @@
+/* ============================================
+   COMPANIES PAGE
+   ============================================ */
+
+.companies-page .companies-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 32px;
+}
+
+.companies-page .search-icon {
+  font-size: 1.2rem;
+  opacity: 0.5;
+}
+
+.companies-page .search-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.companies-page .search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.companies-page .search-clear {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.companies-page .search-clear:hover {
+  color: var(--text-primary);
+  background: var(--bg-glass-hover);
+}
+
+.companies-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+}
+
+.companies-sidebar .filter-group {
+  margin-bottom: 20px;
+}
+
+.companies-sidebar .filter-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.companies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.companies-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+@media (max-width: 768px) {
+  .companies-layout {
+    grid-template-columns: 1fr;
+  }
+}

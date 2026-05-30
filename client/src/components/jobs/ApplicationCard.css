@@ -1,0 +1,109 @@
+.application-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.app-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.app-card-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.app-card-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.app-card-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+a.app-card-name:hover {
+  color: var(--primary-400);
+}
+
+.app-card-detail {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.app-card-cover {
+  padding: 12px 16px;
+  background: var(--bg-glass);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--primary-500);
+}
+
+.app-card-cover-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.app-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color);
+}
+
+.app-card-time {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.app-status-select {
+  max-width: 160px;
+  padding: 6px 12px !important;
+  font-size: 0.8rem !important;
+}
+
+.app-card-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.app-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-card-note-section {
+  padding: 14px;
+  background: var(--bg-glass);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  animation: fadeIn var(--transition-base) ease-out;
+}
+
+.app-card-history-section {
+  border-top: 1px solid var(--border-color);
+  padding-top: 4px;
+}

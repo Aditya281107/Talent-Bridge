@@ -1,0 +1,89 @@
+/* ============================================
+   CANDIDATES PAGE
+   ============================================ */
+
+.candidates-page .candidates-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 32px;
+}
+
+.candidates-page .search-icon {
+  font-size: 1.2rem;
+  opacity: 0.5;
+}
+
+.candidates-page .search-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.candidates-page .search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.candidates-page .search-clear {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.candidates-page .search-clear:hover {
+  color: var(--text-primary);
+  background: var(--bg-glass-hover);
+}
+
+.candidates-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+}
+
+.candidates-sidebar .filter-group {
+  margin-bottom: 20px;
+}
+
+.candidates-sidebar .filter-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.candidates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.candidates-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.pagination-info {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .candidates-layout {
+    grid-template-columns: 1fr;
+  }
+}

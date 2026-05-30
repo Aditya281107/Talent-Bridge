@@ -1,0 +1,50 @@
+.profile-page { padding-top: 100px; }
+
+.profile-layout { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+
+.profile-header-card {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; animation: fadeInUp 0.4s ease-out;
+}
+
+.profile-avatar-section { display: flex; align-items: center; gap: 20px; }
+
+.profile-avatar-lg {
+  width: 80px; height: 80px; border-radius: var(--radius-xl);
+  background: var(--gradient-primary); display: flex; align-items: center;
+  justify-content: center; color: white; font-weight: 800; font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.profile-name { font-size: 1.5rem; font-weight: 800; margin-bottom: 4px; }
+.profile-email { font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 6px; }
+
+.profile-content { animation: fadeInUp 0.5s ease-out 0.1s both; }
+
+.profile-form { display: flex; flex-direction: column; gap: 4px; }
+.profile-section-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border-color); }
+
+.profile-form-actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 8px; }
+
+.profile-display { display: flex; flex-direction: column; gap: 20px; }
+
+.profile-info-card { animation: fadeInUp 0.4s ease-out; }
+
+.profile-bio { font-size: 0.925rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; }
+
+.profile-details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.profile-detail { display: flex; flex-direction: column; gap: 4px; }
+.profile-detail-label { font-size: 0.8rem; color: var(--text-muted); }
+.profile-detail-value { font-size: 0.925rem; font-weight: 500; color: var(--text-primary); }
+
+.profile-skills { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-hint { display: block; font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
+
+@media (max-width: 768px) {
+  .profile-header-card { flex-direction: column; text-align: center; }
+  .profile-avatar-section { flex-direction: column; }
+  .profile-details-grid, .form-row { grid-template-columns: 1fr; }
+}
