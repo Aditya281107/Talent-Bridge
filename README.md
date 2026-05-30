@@ -110,8 +110,5 @@ This application is configured for a unified deployment on [Render.com](https://
 
 ---
 
-## 📝 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
 
 *Built with ❤️ to bridge the gap between talent and opportunity.*
