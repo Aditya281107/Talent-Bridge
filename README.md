@@ -4,7 +4,6 @@
 
 TalentBridge is a comprehensive, full-stack recruitment solution designed to streamline the hiring process for both employers and job seekers. Built with a robust **MERN stack** (MongoDB, Express, React, Node.js), it goes beyond simple job boards by integrating **Real-time Messaging**, **AI-driven insights**, **Live Code Assessments**, and **Automated Resume Parsing**.
 
-![TalentBridge Hero](https://via.placeholder.com/1200x400/0f172a/ffffff?text=TalentBridge+-+Next-Gen+Recruitment)
 
 ---
 
