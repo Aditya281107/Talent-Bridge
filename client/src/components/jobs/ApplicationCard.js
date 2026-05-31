@@ -217,13 +217,9 @@ const ApplicationCard = ({ application, isEmployerView = false, onStatusChange }
                   className="btn btn-primary btn-sm"
                   onClick={async () => {
                     try {
-                      const token = localStorage.getItem('tb_token');
-                      const baseURL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
-                      const response = await fetch(`${baseURL}/applications/${application._id}/offer-letter`, {
-                        headers: { Authorization: `Bearer ${token}` }
+                      const blob = await api.get(`/applications/${application._id}/offer-letter`, {
+                        responseType: 'blob'
                       });
-                      if (!response.ok) throw new Error('Failed to download');
-                      const blob = await response.blob();
                       const url = window.URL.createObjectURL(blob);
                       const a = document.createElement('a');
                       a.href = url;
